@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/ucrop_color_toolbar"
-        android:minHeight="?attr/actionBarSize">
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/toolbar_title"
@@ -52,7 +53,39 @@
         android:id="@+id/controls_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/action_buttons"
         android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/action_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000">
+
+        <ImageView
+            android:id="@+id/action_button_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:padding="6dp"
+            android:src="@drawable/ucrop_icon_close" />
+
+        <LinearLayout
+            android:id="@+id/action_button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ucrop_white_corner"
+            android:paddingHorizontal="44dp"
+            android:paddingVertical="6dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ucrop_icon_next" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
