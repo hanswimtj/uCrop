@@ -406,14 +406,11 @@ public class UCropActivity extends AppCompatActivity {
      *
      * @param color - status-bar color
      */
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setStatusBarColor(@ColorInt int color) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            final Window window = getWindow();
-            if (window != null) {
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(color);
-            }
+        final Window window = getWindow();
+        if (window != null) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(color);
         }
     }
 
